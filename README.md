@@ -1,7 +1,7 @@
 # Nacht-skin-for-openAtv
 v7.0
 
-support me...
+support me...and more...
 
 https://www.patreon.com/digiteng
 
