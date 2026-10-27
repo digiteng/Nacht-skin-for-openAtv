@@ -1,7 +1,6 @@
 #!/bin/sh
 # echo "bbbbbbbbbbb"
-read -p "Are you sure? (y/n) : " -n 1 -r
-echo -e "eeeeeeee"
+read -p "Are you sure? (y/n) : " -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo "ok"
