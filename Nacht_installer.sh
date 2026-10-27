@@ -60,14 +60,18 @@ fi
 rm -f /tmp/Nacht_skin.tar.gz
 
 echo -e "${BLUE}-----------------------------------------------${NC}"
-echo -e "${YELLOW}[?] ${CYAN}Restart Enigma2 for changes to apply? (y/n)${NC}"
+#echo -e "${YELLOW}[?] ${CYAN}Restart Enigma2 for changes to apply? (y/n)${NC}"
+echo "Devam etmek istiyor musunuz? (y/n)"
 read -n 1 -r answer
+# Tuş basıldığında imleç bir alt satıra inmez, bu yüzden echo ile satır atlayın
+echo
 
 if [[ $answer =~ ^[Yy]$ ]]; then
-    echo -e "${GREEN}[INFO] ${NC}Enigma2 (GUI) restarting...${NC}"
-    init 4;sleep 1;init 3
+    echo "Onaylandı."
+    # İşlem kodları
 else
-    echo -e "${YELLOW}[INFO] ${NC}Installation completed. Please restart your device manually.${NC}"
+    echo "İptal edildi."
     exit
 fi   
+
 echo -e "${BLUE}===============================================${NC}"
