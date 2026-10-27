@@ -70,16 +70,20 @@ echo -e "${BLUE}-----------------------------------------------${NC}"
     # echo -e "${YELLOW}[INFO] ${NC}Installation completed. Please restart your device manually.${NC}"
     # exit
 # fi
-echo "Devam etmek istiyor musunuz? (y/n)"
-read -n 1 -r answer
-# Tuş basıldığında imleç bir alt satıra inmez, bu yüzden echo ile satır atlayın
-echo
 
-if [[ $answer =~ ^[Yy]$ ]]; then
-    echo "Onaylandı."
-    # İşlem kodları
-else
-    echo "İptal edildi."
-    exit
-fi
+while true; do
+    read -p "İşlemi yapmak istiyor musunuz? (e/h): " yn
+    case $yn in
+        [Ee]* )
+            echo "İşlem başlatılıyor..."
+            # İşlem kodları buraya
+            break;;
+        [Hh]* )
+            echo "İşlem iptal edildi."
+            exit;;
+        * )
+            echo "Lütfen 'e' veya 'h' giriniz.";;
+    esac
+done   
+
 echo -e "${BLUE}===============================================${NC}"
