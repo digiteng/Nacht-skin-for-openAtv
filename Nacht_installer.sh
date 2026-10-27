@@ -69,7 +69,7 @@ case $yn in
 	[yY] ) echo "restarting...";init 4;sleep 1;init 3;
 		break;;
 	[nN] ) echo -e "${YELLOW}[INFO] ${NC}Installation completed. Please restart your device manually.${NC}";
-		exit;;
+		exit
 esac
 
 done
