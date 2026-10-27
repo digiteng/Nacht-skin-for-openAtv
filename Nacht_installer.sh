@@ -63,8 +63,6 @@ echo -e "${BLUE}-----------------------------------------------${NC}"
 echo -e "${YELLOW}[?] ${CYAN}Restart Enigma2 for changes to apply? (y/n)${NC}"
 read -n 1 -r answer
 
-echo ""
-
 if [[ $answer =~ ^[Yy]$ ]]; then
     echo -e "${GREEN}[INFO] ${NC}Enigma2 (GUI) restarting...${NC}"
     init 4;sleep 1;init 3
