@@ -3,23 +3,23 @@
 # wget -qO- https://raw.githubusercontent.com/digiteng/Nacht-skin-for-openAtv/main/Nacht_installer.sh | bash
 
 GREEN='\033[0;32m'
-CYAN='\033[0;36m'
+BLUE='\033[1;34m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 
 clear
 
-echo -e "${CYAN}"
+echo -e "${BLUE}"
 echo " _   _    _    ____ _   _ _____" 
 echo "| \ | |  / \  / ___| | | |_   _|"
 echo "|  \| | / _ \| |   | |_| | | |  "
 echo "| |\  |/ ___ \ |___|  _  | | |  "
 echo "|_| \_/_/   \_\____|_| |_| |_|  "
 echo -e "${NC} by digiteng"
-echo -e "${CYAN}===============================================${NC}"
-echo -e "${CYAN}    Starting Nacht Skin Installation...      ${NC}"
-echo -e "${CYAN}===============================================${NC}"
+echo -e "${BLUE}===============================================${NC}"
+echo -e "${BLUE}    Starting Nacht Skin Installation...      ${NC}"
+echo -e "${BLUE}===============================================${NC}"
 echo ""
 
 echo -e "${YELLOW}[*] Checking the latest version information...${NC}"
@@ -58,7 +58,7 @@ fi
 
 rm -f /tmp/Nacht_skin.tar.gz
 
-echo -e "${CYAN}-----------------------------------------------${NC}"
+echo -e "${BLUE}-----------------------------------------------${NC}"
 echo -e "${YELLOW}[?] Restart Enigma2 for changes to apply? (y/n)${NC}"
 read -r response
 if [ "$response" = "y" ] || [ "$response" = "Y" ]; then
@@ -68,4 +68,4 @@ else
     echo -e "${YELLOW}[*] Installation completed. Please restart your device manually.${NC}"
 fi
 
-echo -e "${CYAN}===============================================${NC}"
+echo -e "${BLUE}===============================================${NC}"
