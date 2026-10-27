@@ -61,16 +61,15 @@ echo -e "${BLUE}-----------------------------------------------${NC}"
 while true; do
     read -p "Restart Enigma2 for changes to apply? (y/n) : " yn
     case $yn in
-        [Ee]* )
+        [Yy]* )
             echo "Restarting..."
             # İşlem kodları buraya
             break;;
-        [Hh]* )
+        [Nn]* )
             echo "Canceled"
-            exit;;
-        * )
-            echo "y or n";;
+            exit
+
     esac
-done   
+done 
 
 echo -e "${BLUE}===============================================${NC}"
