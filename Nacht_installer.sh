@@ -1,7 +1,7 @@
 #!/bin/sh
-read -p "Proceed? [y/n]: " yn
-case $yn in
-    [Yy]* ) echo "Confirmed";;
-    [Nn]* ) echo "Cancelled";;
-    * ) echo "Please answer y or n.";;
-esac   
+read -p "Continue? [Y/n]: " yn
+if [[ $yn =~ ^[Yy]$ ]] || [[ -z $yn ]]; then
+    echo "Proceeding..."
+else
+    echo "Exiting..."
+fi   
