@@ -9,7 +9,7 @@ YELLOW='\033[1;33m'
 RED='\033[0;31m'
 NC='\033[0m'
 clear
-read -p "Are you sure? (y/n) : "
+read -p "eeeeeeeeeee (y/n) : "
 
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
