@@ -63,7 +63,7 @@ echo
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "${NC}Restarting..."
-	# init 4;sleep 1;init 3
+	init 4;sleep 1;init 3
 else
     echo "${NC}Canceled."
 fi   
