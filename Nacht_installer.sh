@@ -57,7 +57,7 @@ API_URL="https://api.github.com/repos/digiteng/Nacht-skin-for-openAtv/releases/l
 
 echo -e "${BLUE}-----------------------------------------------${NC}"
 
-read -p "Are you sure? (y/n) : " -n 1 -r
+read -p "Are you sure? (y/n) : " -r
 echo ""
 echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]
