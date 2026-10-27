@@ -60,30 +60,19 @@ API_URL="https://api.github.com/repos/digiteng/Nacht-skin-for-openAtv/releases/l
 # rm -f /tmp/Nacht_skin.tar.gz
 
 echo -e "${BLUE}-----------------------------------------------${NC}"
-# echo -e "${YELLOW}[?] ${CYAN}Restart Enigma2 for changes to apply? (y/n)${NC}"
-# read -n 1 -r answer
-# echo
-# if [[ $answer =~ ^[Yy]$ ]]; then
-    # echo -e "${GREEN}[INFO] ${NC}Enigma2 (GUI) restarting...${NC}"
-    # init 4;sleep 1;init 3
-# else
-    # echo -e "${YELLOW}[INFO] ${NC}Installation completed. Please restart your device manually.${NC}"
-    # exit
-# fi
 
 while true; do
-    read -p "İşlemi yapmak istiyor musunuz? (e/h): " yn
-    case $yn in
-        [Ee]* )
-            echo "İşlem başlatılıyor..."
-            # İşlem kodları buraya
-            break;;
-        [Hh]* )
-            echo "İşlem iptal edildi."
-            exit;;
-        * )
-            echo "Lütfen 'e' veya 'h' giriniz.";;
-    esac
-done   
 
+read -p "${YELLOW}[?] ${CYAN}Restart Enigma2 for changes to apply? (y/n)${NC}" yn
+
+case $yn in 
+	[yY] ) echo "restarting...";init 4;sleep 1;init 3;
+		break;;
+	[nN] ) echo -e "${YELLOW}[INFO] ${NC}Installation completed. Please restart your device manually.${NC}";
+		exit;;
+esac
+
+done
+
+fi
 echo -e "${BLUE}===============================================${NC}"
