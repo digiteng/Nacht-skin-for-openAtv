@@ -56,16 +56,13 @@ API_URL="https://api.github.com/repos/digiteng/Nacht-skin-for-openAtv/releases/l
 # rm -f /tmp/Nacht_skin.tar.gz
 
 echo -e "${BLUE}-----------------------------------------------${NC}"
-echo "Devam etmek istiyor musunuz? (y/n)"
-read -r answer
-echo
-
-if [[ $answer =~ ^[Yy]$ ]]; then
-    echo "Onaylandı......"
-    # İşlem kodları
-else
-    echo "İptal edildi........................."
-    exit
-fi   
+while true; do
+    read -p "Do you wish to install this program? (y/n) : " yn
+    case $yn in
+        [Yy]* ) echo "ok"; break;;
+        [Nn]* ) exit;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
 
 echo -e "${BLUE}===============================================${NC}"
