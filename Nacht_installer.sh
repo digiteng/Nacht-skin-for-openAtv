@@ -58,16 +58,19 @@ API_URL="https://api.github.com/repos/digiteng/Nacht-skin-for-openAtv/releases/l
 echo -e "${BLUE}-----------------------------------------------${NC}"
 
 #echo -e "${YELLOW}[?] ${CYAN}Restart Enigma2 for changes to apply? (y/n)"
-read -p "${YELLOW}[?] ${CYAN}Restart Enigma2 for changes to apply? (y/n)"
-
-echo 
-
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "Restarting..."
-	# init 4;sleep 1;init 3
-else
-    echo "Canceled."
-fi   
-
+while true; do
+    read -p "Restart Enigma2 for changes to apply? (y/n) : " yn
+    case $yn in
+        [Ee]* )
+            echo "Restarting..."
+            # İşlem kodları buraya
+            break;;
+        [Hh]* )
+            echo "Canceled"
+            exit;;
+        * )
+            echo "y or n";;
+    esac
+done   
 
 echo -e "${BLUE}===============================================${NC}"
