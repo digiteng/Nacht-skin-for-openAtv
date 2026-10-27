@@ -1,8 +1,7 @@
 #!/bin/sh
-# echo "bbbbbbbbbbb"
-read -p "Are you sure? (y/n) : " -r
-if [[ $REPLY =~ ^[Yy]$ ]]
-then
-    echo "ok"
-fi
-
+read -p "Proceed? [y/n]: " yn
+case $yn in
+    [Yy]* ) echo "Confirmed";;
+    [Nn]* ) echo "Cancelled";;
+    * ) echo "Please answer y or n.";;
+esac   
