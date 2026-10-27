@@ -17,7 +17,7 @@ echo "| \ | |  / \  / ___| | | |_   _|"
 echo "|  \| | / _ \| |   | |_| | | |  "
 echo "| |\  |/ ___ \ |___|  _  | | |  "
 echo "|_| \_/_/   \_\____|_| |_| |_|  "
-echo -e "${NC} by digiteng"
+echo -e "${NC}by digiteng"
 echo -e "${CYAN}===============================================${NC}"
 echo -e "${CYAN}    Nacht Skin Kurulumu Başlatılıyor...       ${NC}"
 echo -e "${CYAN}===============================================${NC}"
@@ -25,7 +25,7 @@ echo ""
 
 # 1. GitHub API üzerinden en son sürümün browser_download_url bilgisini çekme
 echo -e "${YELLOW}[*] En son sürüm bilgileri kontrol ediliyor...${NC}"
-API_URL="https://github.com"
+API_URL="https://api.github.com/repos/digiteng/Nacht-skin-for-openAtv/releases/latest"
 DOWNLOAD_URL=$(wget -qO- $API_URL | grep "browser_download_url" | head -n 1 | cut -d '"' -f 4)
 
 if [ -z "$DOWNLOAD_URL" ]; then
