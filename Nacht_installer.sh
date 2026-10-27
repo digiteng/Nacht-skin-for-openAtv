@@ -57,11 +57,11 @@ API_URL="https://api.github.com/repos/digiteng/Nacht-skin-for-openAtv/releases/l
 
 echo -e "${BLUE}-----------------------------------------------${NC}"
 echo "Devam etmek istiyor musunuz? (y/n)"
-read -n 1 -r answer
+read -r answer
 echo
 
 if [[ $answer =~ ^[Yy]$ ]]; then
-    echo "Onaylandı."
+    echo "Onaylandı......"
     # İşlem kodları
 else
     echo "İptal edildi."
