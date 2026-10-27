@@ -64,7 +64,7 @@ if [[ $answer =~ ^[Yy]$ ]]; then
     echo "Onaylandı......"
     # İşlem kodları
 else
-    echo "İptal edildi."
+    echo "İptal edildi........................."
     exit
 fi   
 
