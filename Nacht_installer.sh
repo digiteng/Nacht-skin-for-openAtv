@@ -57,14 +57,12 @@ API_URL="https://api.github.com/repos/digiteng/Nacht-skin-for-openAtv/releases/l
 
 echo -e "${BLUE}-----------------------------------------------${NC}"
 
-while true; do
-    read -p "Do you wish to install this program? (y/n) : " yn
-    case $yn in
-        [Yy]* ) echo "ok"; break;;
-        [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
+read -p "Are you sure? (y/n) : " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "ok"
+fi
 
 
 echo -e "${BLUE}===============================================${NC}"
